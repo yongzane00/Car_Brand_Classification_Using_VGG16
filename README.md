@@ -1,23 +1,25 @@
 # Car_Brand_Classification_Using_VGG16
- Modifying VGG16 pre-trainned CNN to classify car brands
+ Modifying the pre-trained VGG16 CNN for car brand classification.
 
 # Problem Statement
- VGG16 model is a relatively large model tends to overfit with small sample size. Using accuracy as the evaluation metrics will result in fluctuation of the validation accuracy, therfore, reducing the robustness of the model.
-
+ The VGG16 model is relatively large and tends to overfit when working with a small sample size. Utilizing accuracy as the evaluation metric leads to fluctuations in validation accuracy, thereby diminishing the robustness of the model.
+ 
 # Methodology 
- 1. Unfreezing last covolutional block of the VGG16
-    In order to fine-tune the VGG16 so that it fit wells to classify car brands. This step is cruicial to train the last convolutional block and update the weights of each nodes during each epoch.
- 2. Add in Regularization term
-    Unfreezing the convolutional block has the tendancy to overfit the data, which can fits better to the train data but fails to converge for the test data. L2 Regularization term is added here to avoid overfitting.
- 3. Optimize the other parameters
-    Optimize parameters such as learning rate, number of epoch, switching to F1 evaluation metrics to obtain better results.
-
+### 1. Unfreezing the last convolutional block of the VGG16
+   To fine-tune the VGG16 model for optimal classification of car brands, it is crucial to train the last convolutional block and update the weights of each node during each epoch.
+### 2. Add in L2 Regularization term
+   Unfreezing the convolutional block has the tendency to overfit the data, resulting in a better fit to the training data but a failure to converge for the test data. An L2 regularization term is added here to mitigate overfitting.
+### 3. Optimize the other parameters
+   Optimize parameters, including the learning rate and number of epochs, and switch to F1 evaluation metrics to achieve improved results.
+    
 # Conclusion
- We can see there's significant improvements based on the confusion metrics below after modifying the VGG16 CNN. 
+ We can observe significant improvements in the confusion metrics below after modifying the VGG16 CNN.
 
- Before:
+### Before:
+ 
  ![Alt text](image.png)
 
- After:
+### After:
+ 
  ![Alt text](image-1.png)
 
